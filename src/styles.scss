@@ -1,0 +1,91 @@
+@use 'variables' as *;
+
+/* styles.scss */
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+// Estilos base reutilizables para todos los botones
+.button-generic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+
+  border-radius: 10px;
+  font-size: $font-size-buttons;
+  letter-spacing: 1px;
+  padding: 13px 24px;
+  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
+  &:disabled,
+  &[disabled] {
+    background-color: #e1e1e1;
+    cursor: not-allowed;
+  }
+}
+
+.button-primary {
+  @extend .button-generic;
+  background: $primary-color;
+  color: $white-color;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+.button-secondary {
+  @extend .button-generic;
+  background: $secondary-color;
+  color: $white-color;
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+
+.button-transparent-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: $font-size-buttons;
+  padding: 10px 24px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  color: $secondary-color;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.45;
+  }
+}

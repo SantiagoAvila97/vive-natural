@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+.hero {
+  background: url('/modules/home/banner.png') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+
+  .hero-text {
+    h1 {
+      margin-bottom: 0.5rem;
+      font-size: $text-24;
+    }
+
+    p {
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+      font-size: $text-18;
+    }
+
+  }
+}
+
+.products {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Quicksand', sans-serif;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+    font-size: $text-30;
+  }
+
+  p {
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: $text-18;
+  }
+
+  .product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 3rem;
+
+    img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
